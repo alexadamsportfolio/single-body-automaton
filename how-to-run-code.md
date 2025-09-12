@@ -13,4 +13,4 @@ Below is an example of fish.py being run with configured parameters:
 
 ```python3 fish.py --grid-size 50 --step-size 2 --weight 2.5 --interval 700```
 
-There is also a ```--mov-file``` parameter that presumably saves the animation to a file, but I've never tested it.
+There is also a ```--mov-file``` parameter that presumably saves the animation to a file, but I've never bothered to test it.
