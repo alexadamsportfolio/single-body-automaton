@@ -13,4 +13,8 @@ Below is an example of fish.py being run with configured parameters:
 
 ```python3 fish.py --grid-size 50 --step-size 2 --weight 2.5 --interval 700```
 
+And below is an example output of the automaton:
+
+<img width="1919" height="1006" alt="image22" src="https://github.com/user-attachments/assets/473c7612-700c-4cf2-bc3f-29d2c25d177a" />
+
 There is also a ```--mov-file``` parameter that presumably saves the animation to a file, but I've never bothered to test it.
