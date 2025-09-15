@@ -2,7 +2,7 @@ Assuming that all necessary modules have been installed, fish.py can be easily r
 
 ```python3 fish.py```
 
-However, there are 4 optional parameters that will influence the behavior the the automaton:
+However, there are 4 optional parameters that will influence the behavior of the automaton:
 
 - Grid Size: An integer value that establishes the number of cells are in each dimension for the 2d grid. Default is 30.
 - Step Size: An integer value that determines how many cells the body moves for each iteration. Default is 1.
