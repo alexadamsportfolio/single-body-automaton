@@ -1,3 +1,5 @@
+$$ \textbf{Introduction} $$
+
 Traditionally, the cellular automaton known as Langton's Ant consists of two structures: an underlying discrete grid of boolean values - our "field" - and an evolving position on that grid - our "body", more colloquially known as the "ant".
 The rules are as follows: Given any iteration, the ant will find itself on either a black or white grid cell. If black, the ant will turn itself $90\degree$ counterclockwise; if white, $90\degree$ clockwise.
 Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white.
