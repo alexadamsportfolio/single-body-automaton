@@ -34,10 +34,30 @@ Where $\mu$ is our new and continuous time parameter.
 
 $$ \textbf{Part 2: The Field} $$
 
-PLACEHOLDER TEXT
+So far we have been sweeping the underlying scalar field $\phi: \mathbb{R}^2 \to [0,1]$ under the rug for the sake of simplicity; however, we should probably define it at some point. Particularly, we want it to satisfy the following 3 properties for each iteration:
+
+1. $(\delta(a,x_n)=0) \land (\phi_{n}(a)=1) \implies (\phi_{n+1}(a)=0)$
+2. $(\delta(a,x_n)=0) \land (\phi_{n}(a)=0) \implies (\phi_{n+1}(a)=1)$
+3. $\phi_{n+1}(a) \sim \phi_{n}(a)$ as $\delta(a,x_n) \to \infty$
+
+The first two conditions ensure that the values 0 and 1 are "toggled" on the positions from which the body moves, as is the case for the original Langton's Ant. The second condition ensures that for points sufficiently far away from the body, the perturbation in the scalar field is negligible.
+
+There is probably a massive class of functions that satisfy the conditions for our scalar fields, but the one I have been using in fish.py is the one that satisfies the recursive formula
+
+$$\phi_{n+1}(a)=\phi_{n}(a)-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*}  [\\mathrm{I}]$$
+
+Recalling that $(a-x_n)(a-x_n)*$ is the norm of the difference between the complex numbers $a$ and $x_n$.
+
+I have not yet found a closed-form expression for this definition of $\phi$, but I have noticed that the terms can be rearranged as 
+
+$$\frac{\phi_{n+1}(a)-\phi_{n}(a)}{(n+1)-(n)}=\frac{\Delta \phi_n(a)}{\Delta n}=-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*}  [\\mathrm{II}]$$
+
+And, by converting the discrete change $\Delta$ to an infinitesimal change $d$, we get
+
+$$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\mu)(a-x_\mu)*}  [\\mathrm{III}]$$
 
 $$ \textbf{Closing Remarks} $$
 
-Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will be able to invest more time into my personal research after I graduate from high school. PLACEHOLDER SENTENCE ABOUT WHERE I'M GOING FROM HERE ON THE PURE MATHS FRONT
+Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will be able to invest more time into my personal research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality.
 
-Though our equations have been nice and rigorous, it would be nice to see what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals a trajectory of gradual precession and shifting eccentricity, which is very reminiscent of the trajectory of Mercury under the Schwarzschild metric, suggesting a connection (no pun intended) to differential geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence between the stress-energy tensor and spacetime curvature. Thus, cellular automata may provide an illuminating perspective on physics concerning curved fields such as general relativity, Berry curvature, and quantum gravity.
+Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals an orbit of gradual precession and shifting eccentricity, which is very reminiscent of the trajectory of Mercury under the Schwarzschild metric, suggesting a connection (no pun intended) to differential geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence between the stress-energy tensor and spacetime curvature. Thus, cellular automata may provide an illuminating perspective on physics concerning curved fields such as general relativity, Berry curvature, and quantum gravity.
