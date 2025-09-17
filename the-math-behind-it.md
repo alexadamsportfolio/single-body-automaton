@@ -5,7 +5,7 @@ The rules are as follows: Given any iteration, the ant will find itself on eithe
 Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white.
 
 Now, what I wanted to do was formulate an analogy for Langton's Ant on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
-Seeing as the position of the body can be visualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
+Seeing as the position of the body can be conceptualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
 
 $$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)}  [\\mathrm{I}]$$
 
@@ -18,7 +18,7 @@ Now recall that I said that $\theta_n$ is whatever the angle accumulated by the 
 
 $$\theta_n=\frac{\pi}{2}-\pi\phi_{n-1}(x_{n-1})+\theta_{n-1}  [\\mathrm{II}]$$
 
-And assuming that $\theta_{0}=0$, then we obtain the closed form expression for $\theta_n$
+And assuming that $\theta_{0}=0$, we can collapse the recursion to obtain the closed form expression for $\theta_n$
 
 $$\theta_n=\frac{\pi n}{2}-\pi\sum\limits_{j = 0}^{n-1} {\phi_{j}(x_j)}  [\\mathrm{III}]$$
 
@@ -28,7 +28,7 @@ $$x_{n+1}=\sum\limits_{j = 0}^{n} {e^{i(\frac{\pi (j+1)}{2}-\pi\sum\limits_{k = 
 
 Though space has been treated as continuous so far, we have still been treating the time parameter $n$ as discrete. However, we can design an analogy for continuous time by converting our summations into integrals
 
-$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi (\nu+1)}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu  [\\mathrm{V}]$$
+$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \nu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu  [\\mathrm{V}]$$
 
 Where $\mu$ is our new and continuous time parameter.
 
