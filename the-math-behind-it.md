@@ -33,3 +33,11 @@ $$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi (\nu+1)}{2}-\pi\int_{0}^{\nu} {\phi_{\r
 Where $\mu$ is our new and continuous time parameter.
 
 $$ \textbf{Part 2: The Field} $$
+
+PLACEHOLDER TEXT
+
+$$ \textbf{Closing Remarks} $$
+
+Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will be able to invest more time into my personal research after I graduate from high school. PLACEHOLDER SENTENCE ABOUT WHERE I'M GOING FROM HERE ON THE PURE MATHS FRONT
+
+Though our equations have been nice and rigorous, it would be nice to see what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals a trajectory of gradual precession and shifting eccentricity, which is very reminiscent of the trajectory of Mercury under the Schwarzschild metric, suggesting a connection (no pun intended) to differential geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence between the stress-energy tensor and spacetime curvature. Thus, cellular automata may provide an illuminating perspective on physics concerning curved fields such as general relativity, Berry curvature, and quantum gravity.
