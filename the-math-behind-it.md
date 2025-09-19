@@ -10,7 +10,7 @@ Seeing as the position of the body can be conceptualized by concatenating rotati
 $$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)}  [\\mathrm{I}]$$
 
 Where $x_n$ is the position of the body at iteration $n$, $\phi_{n}(x_n)$ is the the value of the underlying scalar field at point $x_n$, and $\theta_n$ is whatever the angle accumulated by the last iteration was.
-Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{pi}{2}$ radians counterclockwise, and the same amount clockwise if $\phi_{n}(x_n)=0$, preserving the actions of white and black on the original Langton's Ants as those of 1 and 0 respectively.
+Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{\pi}{2}$ radians counterclockwise, and the same amount clockwise if $\phi_{n}(x_n)=0$, preserving the actions of white and black on the original Langton's Ants as those of 1 and 0 respectively.
 
 $$ \textbf{Part 1: The Body} $$
 
