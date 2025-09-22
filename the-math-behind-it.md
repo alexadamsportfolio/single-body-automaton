@@ -22,7 +22,7 @@ And assuming that $\theta_{0}=0$, we can collapse the recursion to obtain the cl
 
 $$\theta_n=\frac{\pi n}{2}-\pi\sum\limits_{j = 0}^{n-1} {\phi_{j}(x_j)}  [\\mathrm{II}]$$
 
-And an analogous formulation of equation $[\\mathrm{Introduction, I}]$ like so
+And an analogous formulation of equation [Introduction, I] like so
 
 $$x_{n+1}=\sum\limits_{j = 0}^{n} {e^{i(\frac{\pi (j+1)}{2}-\pi\sum\limits_{k = 0}^{j} {\phi_{k}(x_k)})}}  [\\mathrm{III}]$$
 
