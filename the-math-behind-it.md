@@ -66,6 +66,6 @@ Here is the output of the automaton:
 
 <img width="608" height="548" alt="Screenshot 2025-09-21 9 16 29 AM" src="https://github.com/user-attachments/assets/ca00dd51-83a8-4f47-80bb-218c359e6ab1" />
 
-And this is the trajectory of an orbit around a rotating Kerr black hole (source: https://en.wikipedia.org/wiki/File:Orbit_around_a_rotating_Kerr_black_hole.gif):
+And the trajectory of an orbit around a rotating Kerr black hole (source: https://en.wikipedia.org/wiki/File:Orbit_around_a_rotating_Kerr_black_hole.gif):
 
 ![Orbit_around_a_rotating_Kerr_black_hole](https://github.com/user-attachments/assets/09add75c-1fcc-4bab-8b93-a5269362e5d2)
