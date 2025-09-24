@@ -62,4 +62,10 @@ Progress has been slow, largely due to having little time between my numerous ac
 
 Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals an orbit of varying precession and eccentricity very reminiscent of an orbital trajectory on the Kerr metric induced by a rotating black hole, suggesting a connection (no pun intended) to differential geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence between the stress-energy tensor and spacetime curvature. Thus, automata theory may provide an illuminating perspective on physics concerning curved fields such as general relativity, Berry curvature, and quantum gravity.
 
+Here is the output of the automaton:
+
 <img width="608" height="548" alt="Screenshot 2025-09-21 9 16 29 AM" src="https://github.com/user-attachments/assets/ca00dd51-83a8-4f47-80bb-218c359e6ab1" />
+
+And this is the trajectory of an orbit around a rotating Kerr black hole (source: https://en.wikipedia.org/wiki/File:Orbit_around_a_rotating_Kerr_black_hole.gif):
+
+![Orbit_around_a_rotating_Kerr_black_hole](https://github.com/user-attachments/assets/09add75c-1fcc-4bab-8b93-a5269362e5d2)
