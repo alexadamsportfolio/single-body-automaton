@@ -1,4 +1,4 @@
-$$ \textbf{Introduction} $$
+## Introduction
 
 Traditionally, the cellular automaton known as Langton's Ant consists of two structures: an underlying discrete grid of boolean values - our "field" - and an evolving position on that grid - our "body", more colloquially known as the "ant".
 The rules are as follows: Given any iteration, the ant will find itself on either a black or white grid cell. If black, the ant will turn itself $90\degree$ counterclockwise; if white, $90\degree$ clockwise.
@@ -12,7 +12,7 @@ $$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)}  [\\mathrm{I}]$$
 Where $x_n$ is the position of the body at iteration $n$, $\phi_{n}(x_n)$ is the the value of the underlying scalar field at point $x_n$, and $\theta_n$ is whatever the angle accumulated by the last iteration was.
 Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{\pi}{2}$ radians counterclockwise, and the same amount clockwise if $\phi_{n}(x_n)=1$, preserving the actions of white and black on the original Langton's Ant as those of 1 and 0 respectively.
 
-$$ \textbf{Part 1: The Body} $$
+## Part 1: The Body
 
 Now recall that I said that $\theta_n$ is whatever the angle accumulated by the last iteration was. This means that
 
@@ -32,7 +32,7 @@ $$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \nu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(
 
 Where $\mu$ is our new and continuous time parameter.
 
-$$ \textbf{Part 2: The Field} $$
+## Part 2: The Field
 
 So far we have been sweeping the underlying scalar field $\phi: \mathbb{R}^2 \to [0,1]$ under the rug for the sake of simplicity; however, we should probably define it at some point. Particularly, we want it to satisfy the following 3 properties for each iteration:
 
@@ -56,7 +56,7 @@ And, by converting the discrete change $\Delta$ to an infinitesimal change $d$, 
 
 $$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\mu)(a-x_\mu)*}  [\\mathrm{III}]$$
 
-$$ \textbf{Closing Remarks} $$
+## Closing Remarks
 
 Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will have more opportunities to pursue my research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. I am also curious about identifying a pseudo-Riemannian manifold on which the trajectory of the body is a geodesic, for reasons that will be motivated in the next paragraph.
 
