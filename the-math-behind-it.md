@@ -56,9 +56,57 @@ And, by converting the discrete change $\Delta$ to an infinitesimal change $d$, 
 
 $$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\mu)(a-x_\mu)*} \\quad [\\mathrm{III}]$$
 
+## Part 3: The Curvature
+
+Since the output of fish.py strongly resembles an astrophysical orbit, has become a major goal of mine to identify a pseudo-Riemannian manifold on which the trajectory of the automaton body is a geodesic.
+Luckily, we can derive the Riemann curvature tensor of such a manifold from its Christoffel connection coefficients: 
+
+$$R^\rho_{\sigma \mu \nu}=\partial_\mu \Gamma^\rho_{\nu \sigma}-\partial_\nu \Gamma^\rho_{\mu \sigma}+\Gamma^\rho_{\mu \lambda} \Gamma^\lambda_{\nu \sigma}+\Gamma^\rho_{\nu \lambda} \Gamma^\lambda_{\mu \sigma}  \\quad [\mathrm{I}]$$
+
+And the Christoffel coefficients can be realized from the geodesic equation for universal Newtonian time $\mu$, as in Newton-Cartan theory (since the field defined in [Part II, I] transforms instantaneously, violating relativistic causality):
+
+$$\frac{\partial^2 x^k}{\partial \mu^2}=-\Gamma^k_{ij} \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu}`\\quad [\mathrm{II}]$$
+
+In other words, if the derivatives of $x^i$ and $x^j$ are non-degenerate,
+
+$$\Gamma^k_{ij}=-\frac{\frac{\partial^2 x^k}{\partial \mu^2}}{ \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu}} 
+\\quad [\mathrm{III}]$$
+
+Conveniently for us, we know the three $x^k$ positions for the body from [Part I, IV]:
+
+$$x^0 = \mu  \\quad [\mathrm{IV.a}]$$
+$$x^1 = Re(\int_{0}^{\mu} {e^{i(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu)=\int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{IV.b}]$$
+$$x^2 = Im(\int_{0}^{\mu} {e^{i(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu) = \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{IV.c}]$$
+
+Seeing as $x^0$ is linear with respect to $\mu$ - as is to be expected from a universal Newtonian parameter - the Christoffel symbols of superscript $0$ would be trivial for all $i$ and $j$:
+
+$$\Gamma^0_{ij}=0  \\quad [\mathrm{V}]$$
+
+However, noting that
+
+$$\frac{\partial x^1}{\partial \mu}=cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{VI.a}]$$
+$$\frac{\partial x^2}{\partial \mu}=sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{VI.b}]$$
+$$\frac{\partial^2 x^1}{\partial \mu^2}=-(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{VI.c}]$$
+$$\frac{\partial^2 x^2}{\partial \mu^2}=(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu \\quad [\mathrm{VI.d}]$$
+
+The other Christoffel symbols, let alone the curvature tensor, become very unwieldly, so I will spare your eyes and omit them; just recall [III] if you really want to see them.
+
+Though a clean, closed-form exact solution likely does not exist - which is not uncommon in non-Euclidean astrophysics - we can still take note of interesting properties to implicitly study the behavior of this system. For instance, we can plug the identities in [IV] into equations [VI] to obtain these interesting systems of differential equations:
+
+$$\frac{\partial x^1}{\partial \mu}=cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} x^2  \\quad [\mathrm{VII.a}]$$
+$$\frac{\partial x^2}{\partial \mu}=sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} x^1  \\quad [\mathrm{VII.b}]$$
+$$\frac{\partial^2 x^1}{\partial \mu^2}=-(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} x^2 - \frac{\pi^2}{4} x^1  \\quad [\mathrm{VII.c}]$$
+$$\frac{\partial^2 x^2}{\partial \mu^2}=(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} x^1 - \frac{\pi^2}{4} x^2 \\quad [\mathrm{VII.d}]$$
+
+The nature of these differential equations, in conjunction with the harmonic phenomena implied by the field-automaton/life.py project, suggests to me that Laplace and/or Fourier transforms may prove useful. Furthermore, for sufficiently small values of $\mu$ we may approximate $sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho)$ as $\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho$, and $cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho)$ as $1$. These are very intriguing horizons, and I am excited to explore them when I get the opportunity. Granted, I must confess that the usage of a two-dimensional spatial projection of astrophysical phenomena typically observed in three spatial dimensions likely has been a source of error thus far.
+
+I would like to close off this section with an image of my original computations for the Christoffel symbols:
+
+![cce19838-521d-4d71-8878-677bb2189d9e 1280x1280](https://github.com/user-attachments/assets/45994b3a-a5e0-40e5-9369-4a4d89280de2)
+
 ## Closing Remarks
 
-Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will have more opportunities to pursue my research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. I am also curious about identifying a pseudo-Riemannian manifold on which the trajectory of the body is a geodesic, for reasons that will be motivated in the next paragraph.
+Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will have more opportunities to pursue my research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. 
 
 Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals an orbit of varying precession and eccentricity very reminiscent of an orbital trajectory on the Kerr metric induced by a rotating black hole, suggesting a connection (no pun intended) to differential geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence between the stress-energy tensor and spacetime curvature. 
 
