@@ -33,4 +33,6 @@ $$\frac{\partial x^1}{\partial \mu}=sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\ph
 $$\frac{\partial^2 x^1}{\partial \mu^2}=-(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu$$
 $$\frac{\partial^2 x^2}{\partial \mu^2}=(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu$$
 
-The other Christoffel symbols get a bit unwieldy:
+The other Christoffel symbols, let alone the curvature tensor, become very unwieldly, so I will spare your eyes and omit them; just recall $\Gamma^k_{ij}=-\frac{\frac{\partial^2 x^k}{\partial \mu^2}}{ \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu}}$ if you really want to see them.
+
+Though a clean, closed-form exact solution likely does not exist - which is not uncommon in non-Euclidean astrophysics - we can still take note of interesting properties to implicitly study the behavior of this system.
