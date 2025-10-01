@@ -24,11 +24,11 @@ $$\theta_n=\frac{\pi n}{2}-\pi\sum\limits_{j = 0}^{n-1} {\phi_{j}(x_j)} \\quad [
 
 And an analogous formulation of equation [Introduction, I] like so
 
-$$x_{n+1}=\sum\limits_{j = 0}^{n} {e^{i(\frac{\pi (j+1)}{2}-\pi\sum\limits_{k = 0}^{j} {\phi_{k}(x_k)})}} \\quad [\\mathrm{III}]$$
+$$x_{n+1}=e^{\frac{i \pi (n+1)}{2}}\sum\limits_{j = 0}^{n} {e^{i\pi\sum\limits_{k = 0}^{j} {\phi_{k}(x_k)}}} \\quad [\\mathrm{III}]$$
 
 Though space has been treated as continuous so far, we have still been treating the time parameter $n$ as discrete. However, we can design an analogy for continuous time by converting our summations into integrals
 
-$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \nu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu \\quad [\\mathrm{IV}]$$
+$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu \\quad [\\mathrm{IV}]$$
 
 Where $\mu$ is our new and continuous time parameter.
 
