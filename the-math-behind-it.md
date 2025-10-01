@@ -7,7 +7,7 @@ Then, the ant will step forth onto the grid cell adjacent to its origin cell in 
 Now, what I wanted to do was formulate an analogy for Langton's Ant on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
 Seeing as the position of the body can be conceptualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
 
-$$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)}  [\\mathrm{I}]$$
+$$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)} \\quad [\\mathrm{I}]$$
 
 Where $x_n$ is the position of the body at iteration $n$, $\phi_{n}(x_n)$ is the the value of the underlying scalar field at point $x_n$, and $\theta_n$ is whatever the angle accumulated by the last iteration was.
 Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{\pi}{2}$ radians counterclockwise, and the same amount clockwise if $\phi_{n}(x_n)=1$, preserving the actions of white and black on the original Langton's Ant as those of 1 and 0 respectively.
@@ -16,19 +16,19 @@ Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{\pi}{2}$ radian
 
 Now recall that I said that $\theta_n$ is whatever the angle accumulated by the last iteration was. This means that
 
-$$\theta_n=\frac{\pi}{2}-\pi\phi_{n-1}(x_{n-1})+\theta_{n-1}  [\\mathrm{I}]$$
+$$\theta_n=\frac{\pi}{2}-\pi\phi_{n-1}(x_{n-1})+\theta_{n-1} \\quad [\\mathrm{I}]$$
 
 And assuming that $\theta_{0}=0$, we can collapse the recursion to obtain the closed form expression for $\theta_n$
 
-$$\theta_n=\frac{\pi n}{2}-\pi\sum\limits_{j = 0}^{n-1} {\phi_{j}(x_j)}  [\\mathrm{II}]$$
+$$\theta_n=\frac{\pi n}{2}-\pi\sum\limits_{j = 0}^{n-1} {\phi_{j}(x_j)} \\quad [\\mathrm{II}]$$
 
 And an analogous formulation of equation [Introduction, I] like so
 
-$$x_{n+1}=\sum\limits_{j = 0}^{n} {e^{i(\frac{\pi (j+1)}{2}-\pi\sum\limits_{k = 0}^{j} {\phi_{k}(x_k)})}}  [\\mathrm{III}]$$
+$$x_{n+1}=\sum\limits_{j = 0}^{n} {e^{i(\frac{\pi (j+1)}{2}-\pi\sum\limits_{k = 0}^{j} {\phi_{k}(x_k)})}} \\quad [\\mathrm{III}]$$
 
 Though space has been treated as continuous so far, we have still been treating the time parameter $n$ as discrete. However, we can design an analogy for continuous time by converting our summations into integrals
 
-$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \nu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu  [\\mathrm{IV}]$$
+$$x_{\mu}=\int_{0}^{\mu} {e^{i(\frac{\pi \nu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)}} d\nu \\quad [\\mathrm{IV}]$$
 
 Where $\mu$ is our new and continuous time parameter.
 
@@ -42,19 +42,19 @@ So far we have been sweeping the underlying scalar field $\phi: \mathbb{R}^2 \to
 
 The first two conditions ensure that the values 0 and 1 are "toggled" on the positions from which the body moves, as is the case for the original Langton's Ant. The second condition ensures that for points sufficiently far away from the body, the perturbation in the scalar field is negligible.
 
-There is probably a massive class of functions that satisfy the conditions for our scalar fields, but the one I have been using in fish.py is the one that satisfies the recursive formula
+There is probably a massive class of functions that satisfy the conditions for our scalar field, but the one I have been using in fish.py is the one that satisfies the recursive formula
 
-$$\phi_{n+1}(a)=\phi_{n}(a)-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*}  [\\mathrm{I}]$$
+$$\phi_{n+1}(a)=\phi_{n}(a)-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*} \\quad [\\mathrm{I}]$$
 
 Recalling that $(a-x_n)(a-x_n)*$ is the magnitude of the difference between the complex numbers $a$ and $x_n$.
 
 I have not yet found a closed-form expression for this definition of $\phi$, but I have noticed that the terms can be rearranged as 
 
-$$\frac{\phi_{n+1}(a)-\phi_{n}(a)}{(n+1)-(n)}=\frac{\Delta \phi_n(a)}{\Delta n}=-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*}  [\\mathrm{II}]$$
+$$\frac{\phi_{n+1}(a)-\phi_{n}(a)}{(n+1)-(n)}=\frac{\Delta \phi_n(a)}{\Delta n}=-\frac{\phi_{n}(a)+\phi_{n}(x_n)-1}{1+(a-x_n)(a-x_n)*} \\quad [\\mathrm{II}]$$
 
 And, by converting the discrete change $\Delta$ to an infinitesimal change $d$, we get
 
-$$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\mu)(a-x_\mu)*}  [\\mathrm{III}]$$
+$$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\mu)(a-x_\mu)*} \\quad [\\mathrm{III}]$$
 
 ## Closing Remarks
 
