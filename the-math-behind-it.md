@@ -102,7 +102,7 @@ The nature of these differential equations, in conjunction with the harmonic phe
 
 I would like to close off this section with an image of my original computations for the Christoffel symbols:
 
-![cce19838-521d-4d71-8878-677bb2189d9e 1280x1280](https://github.com/user-attachments/assets/45994b3a-a5e0-40e5-9369-4a4d89280de2)
+![cce19838-521d-4d71-8878-677bb2189d9e 1280x1280](https://github.com/user-attachments/assets/ff64e161-35d7-4c7b-bd36-cd84a9856dd6)
 
 ## Closing Remarks
 
