@@ -7,13 +7,13 @@ Below is an archaic formulation of the automaton, in terms of vectors over the p
 
 Moving on, the math classes offered at my school are so basic that I will often pursue my own problems instead of taking notes for them (my grade is 98% in the class and the teacher doesn't mind). Here is some work I did for the automaton instead of taking notes for statistics: 
 
-![ab2a703a-2a24-41d1-90d2-94d067e5aeab 1280x1280](https://github.com/user-attachments/assets/9944ca82-33b2-4720-98b8-b631dd20cb0f)
+![ab2a703a-2a24-41d1-90d2-94d067e5aeab 1280x1280](https://github.com/user-attachments/assets/28874261-d0df-47e4-882c-ae659bbb235b)
 
 The scribbled-out math at the top of the page is a failed formulation of the scalar field underlying single-body-automaton/fish.py. The upper middle of the page is a faulty closed-form expression for the position of the body; I made the rookie mistake of claiming that $\int e^{f(x)} dx = \frac{e^{f(x)}}{\int f(x) dx}$ in general, when it is only true when $f(x)$ is linear. The lower middle of the page is a differential equation relating the field to its time derivative, and its derivation was actually valid enough to make it into [Part 2, III] of the-math-behind-it.md. Finally, the bottom is an incomplete attempt to derive a closed-form expression for the scalar field.
 
 Probably the greatest congregation of equations that validly describe the automaton is the whiteboard on my wall, where we can see that all of the equations - with the exception of [VI] - made it into the-math-behind-it.md:
 
-![a097a8f9-6490-4cb6-af64-ebc6a5820de0 1280x1280](https://github.com/user-attachments/assets/c892636f-791e-44f8-94cd-082dd4907761)
+![a097a8f9-6490-4cb6-af64-ebc6a5820de0 1280x1280](https://github.com/user-attachments/assets/0efc373f-acda-46b8-b140-bca2ba8a7c1e)
 
 Equation [VI] is of particular interest to me, as it seeks to describe the automaton as a nonhomogeneous differential equation and thence apply a Laplace transform to unravel it, and as I have mentioned in the-math-behind-it.md, I have no doubt that there will be a breadth of interesting harmonic phenomena underlying it.
 
