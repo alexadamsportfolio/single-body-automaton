@@ -65,7 +65,7 @@ $$R^\rho_{\sigma \mu \nu}=\partial_\mu \Gamma^\rho_{\nu \sigma}-\partial_\nu \Ga
 
 And the Christoffel coefficients can be realized from the geodesic equation for universal Newtonian time $\mu$, as in Newton-Cartan theory (since the field defined in [Part II, I] transforms instantaneously, violating relativistic causality):
 
-$$\frac{\partial^2 x^k}{\partial \mu^2}=-\Gamma^k_{ij} \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu}`\\quad [\mathrm{II}]$$
+$$\frac{\partial^2 x^k}{\partial \mu^2}=-\Gamma^k_{ij} \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu} \\quad [\mathrm{II}]$$
 
 In other words, if the derivatives of $x^i$ and $x^j$ are non-degenerate,
 
