@@ -4,7 +4,7 @@ Traditionally, the cellular automaton known as Langton's Ant consists of two str
 The rules are as follows: Given any iteration, the ant will find itself on either a black or white grid cell. If black, the ant will turn itself $90\degree$ counterclockwise; if white, $90\degree$ clockwise.
 Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white.
 
-Now, what I wanted to do was formulate an analogy for Langton's Ant on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
+When I first learned about Langton's Ant as a high school junior one of the first things that I wanted to do was formulate an analogy on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
 Seeing as the position of the body can be conceptualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
 
 $$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)} \\quad [\\mathrm{I}]$$
