@@ -58,7 +58,7 @@ $$\frac{d \phi_\mu(a)}{d \mu}=-\frac{\phi_{\mu}(a)+\phi_{\mu}(x_\mu)-1}{1+(a-x_\
 
 ## Part 3: The Curvature
 
-Since the output of fish.py strongly resembles an astrophysical orbit, has become a major goal of mine to identify a pseudo-Riemannian manifold on which the trajectory of the automaton body is a geodesic.
+Since the output of fish.py strongly resembles an astrophysical orbit, has become a major goal of mine to identify a (pseudo-)Riemannian manifold on which the trajectory of the automaton body is a geodesic.
 Luckily, we can derive the Riemann curvature tensor of such a manifold from its Christoffel connection coefficients: 
 
 $$R^\rho_{\sigma \mu \nu}=\partial_\mu \Gamma^\rho_{\nu \sigma}-\partial_\nu \Gamma^\rho_{\mu \sigma}+\Gamma^\rho_{\mu \lambda} \Gamma^\lambda_{\nu \sigma}+\Gamma^\rho_{\nu \lambda} \Gamma^\lambda_{\mu \sigma}  \\quad [\mathrm{I}]$$
