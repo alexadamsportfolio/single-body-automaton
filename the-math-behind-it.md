@@ -14,7 +14,7 @@ Note that if $\phi_{n}(x_n)=0$ the exponential rotates by $\frac{\pi}{2}$ radian
 
 ## Part 1: The Body
 
-Now recall that I said that $\theta_n$ is whatever the angle accumulated by the last iteration was. This means that
+Now recall that I said that $\theta_n$ is whatever the angle accumulated by iteration $n$ is. From [Introduction, I], it is evident that
 
 $$\theta_n=\frac{\pi}{2}-\pi\phi_{n-1}(x_{n-1})+\theta_{n-1} \\quad [\\mathrm{I}]$$
 
