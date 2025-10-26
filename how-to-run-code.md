@@ -1,4 +1,4 @@
-I would like to thank the article https://www.geeksforgeeks.org/dsa/conways-game-life-python-implementation/, which provided me with the foundation on which I elaborated the fish.py program.
+I would like to thank the article https://www.geeksforgeeks.org/dsa/conways-game-life-python-implementation/, which provided me with a foundation of code on which I elaborated to produce the fish.py program.
 
 Assuming that all necessary modules have been installed, fish.py can be easily run with
 
