@@ -1,4 +1,4 @@
-Though the-math-behind-it.md delineates the mathematics most necessary to the behavior of this project, it would be a shame for a STEM portfolio not to have some mention of my less successful findings - after all, the end is the smallest, and arguably the most trivial, stage in mathematics.
+Though the-math-behind-it.md delineates the mathematics most necessary to the behavior of this project, it would be a shame for a STEM portfolio not to have some mention of my less successful findings - in failing to make a light bulb ten thousand times, one discovers ten thousand ways how to not make a light bulb.
 This is a gallery of the surviving minority of my incomplete, if not incorrect, attempts on the single-body-automaton project; but they are no less interesting.
 
 Below is an archaic formulation of the automaton, in terms of vectors over the polar coordinates. This would prove to be a very inconvenient formulation, demanding a change in origin for every iteration, and the complex exponentials formalized in the-math-behind-it.md would replace them.
