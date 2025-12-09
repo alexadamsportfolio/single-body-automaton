@@ -108,14 +108,12 @@ I would like to close off this section with an image of my original computations
 
 Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will have more opportunities to pursue my research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. 
 
-Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py reveals an orbit of varying precession and eccentricity very reminiscent of an orbital trajectory on the Kerr metric induced by a rotating black hole, suggesting a connection (no pun intended) to (pseudo-)Riemannian geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence of the Einstein-Hilbert action with the Ricci scalar curvature and the metric determinant, as in $S = \frac{1}{2 \kappa} \int R \sqrt{-g} d^4 x$.
-
-Here is the output of the automaton:
+Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py (see below screenshot) reveals an orbit of varying precession and eccentricity very reminiscent of the frame-dragging induced by a rotating black hole, suggesting a connection (no pun intended) to (pseudo-)Riemannian geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence of the Einstein-Hilbert action with the Ricci scalar curvature and the metric determinant, as in $S = \frac{1}{2 \kappa} \int R \sqrt{-g} d^4 x$.
 
 <img width="608" height="548" alt="Screenshot 2025-09-21 9 16 29 AM" src="https://github.com/user-attachments/assets/ca00dd51-83a8-4f47-80bb-218c359e6ab1" />
 
-And the trajectory of an orbit around a rotating Kerr black hole (source: https://en.wikipedia.org/wiki/File:Orbit_around_a_rotating_Kerr_black_hole.gif):
+Thus, automata may provide a computational approach to (pseudo-)Riemannian field theories like general relativity, Berry curvature, and quantum holonomy theory. In fact, as I am currently reformatting this documentation I am discovering instances of quantum cellular automata being used to compute lattice field theories. More than computation, I believe the emergence of global behavior from the local rules of automata will provide powerful theoretical angles for the mathematics governing aggregations composed from atomic units, whether it be a fluid from molecules, an intelligence from neurons, or a society from ourselves.
 
-![Orbit_around_a_rotating_Kerr_black_hole](https://github.com/user-attachments/assets/09add75c-1fcc-4bab-8b93-a5269362e5d2)
+## References
 
-Thus, automata theory may provide an illuminating perspective on (pseudo-)Riemannian field theories such as general relativity, Berry curvature, and quantum gravity.
+PLACEHOLDER TEXT
