@@ -5,7 +5,7 @@ Below is an archaic formulation of the automaton, in terms of vectors over the p
 
 ![5b574418-6d34-460e-a3c7-d94b6db1b955 1280x1280](https://github.com/user-attachments/assets/708c0f27-0872-40cd-ae97-df01ce6d40d7)
 
-Moving on, the math classes offered at my school are so basic that I will often pursue my own problems instead of taking notes for them (my grade is 98% in the class and the teacher doesn't mind). Here is some work I did for the automaton instead of taking notes for statistics: 
+Moving on, sometimes when I accidentally pick up an extra sheet of assignment paper in class I will do math on it. Here is some work I did for the automaton during my free time in AP Statistics: 
 
 ![ab2a703a-2a24-41d1-90d2-94d067e5aeab 1280x1280](https://github.com/user-attachments/assets/28874261-d0df-47e4-882c-ae659bbb235b)
 
