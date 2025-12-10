@@ -2,7 +2,7 @@
 
 Traditionally, the cellular automaton known as Langton's Ant consists of two structures: an underlying discrete grid of boolean values - our "field" - and an evolving position on that grid - our "body", more colloquially known as the "ant".
 The rules are as follows: Given any iteration, the ant will find itself on either a black or white grid cell. If black, the ant will turn itself $90\degree$ counterclockwise; if white, $90\degree$ clockwise.
-Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white.
+Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white (Langton, 1986).
 
 When I first learned about Langton's Ant as a high school junior one of the first things that I wanted to do was formulate an analogy on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
 Seeing as the position of the body can be conceptualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
@@ -112,8 +112,11 @@ Though our equations have been nice and rigorous, it would be nice to visualize 
 
 <img width="608" height="548" alt="Screenshot 2025-09-21 9 16 29 AM" src="https://github.com/user-attachments/assets/ca00dd51-83a8-4f47-80bb-218c359e6ab1" />
 
-Thus, automata may provide a computational approach to (pseudo-)Riemannian field theories like general relativity, Berry curvature, and quantum holonomy theory. In fact, as I am currently reformatting this documentation I am discovering instances of quantum cellular automata being used to compute lattice field theories. More than computation, I believe the emergence of global behavior from the local rules of automata will provide powerful theoretical angles for the mathematics governing aggregations composed from atomic units, whether it be a fluid from molecules, an intelligence from neurons, or a society from ourselves.
+Thus, automata may provide a computational approach to (pseudo-)Riemannian field theories like general relativity, Berry curvature, and quantum holonomy theory. In fact, as I am currently reformatting this document I am discovering instances of quantum cellular automata being used to compute lattice field theories (McGuigan, 2003). More than computation, I believe the emergence of global behavior from the local rules of automata will provide powerful theoretical angles for the mathematics governing aggregations composed from atomic units, whether it be a fluid from molecules, an intelligence from neurons, or a society from ourselves.
 
 ## References
 
-PLACEHOLDER TEXT
+Langton, C. G. (1986). Studying artificial life with cellular automata. Physica D: Nonlinear Phenomena, 22(1-3), 120–149. https://doi.org/10.1016/0167-2789(86)90237-x
+
+McGuigan, M. (2003). Quantum Cellular Automata from Lattice Field Theories. ArXiv.org. https://arxiv.org/abs/quant-ph/0307176
+
