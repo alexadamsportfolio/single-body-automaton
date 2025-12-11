@@ -4,7 +4,7 @@ Traditionally, the cellular automaton known as Langton's Ant consists of two str
 The rules are as follows: Given any iteration, the ant will find itself on either a black or white grid cell. If black, the ant will turn itself $90\degree$ counterclockwise; if white, $90\degree$ clockwise.
 Then, the ant will step forth onto the grid cell adjacent to its origin cell in the direction determined by its rotation, and the original cell will have its boolean value toggled - white becomes black, and black white (Langton, 1986).
 
-When I first learned about Langton's Ant as a high school junior one of the first things that I wanted to do was formulate an analogy on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
+When I first learned about Langton's Ant as a high school junior, the first thing I did was formulate an analogy on a 2-dimensional Euclidean plane with continuous, rather than boolean, values at each point. 
 Seeing as the position of the body can be conceptualized by concatenating rotating step-arrows, it can be easily represented in terms of complex exponentials:
 
 $$x_{n+1}=x_n+e^{i(\frac{\pi}{2}-\pi\phi_{n}(x_n)+\theta_n)} \\quad [\\mathrm{I}]$$
@@ -63,7 +63,7 @@ Luckily, we can derive the Riemann curvature tensor of such a manifold from its 
 
 $$R^\rho_{\sigma \mu \nu}=\partial_\mu \Gamma^\rho_{\nu \sigma}-\partial_\nu \Gamma^\rho_{\mu \sigma}+\Gamma^\rho_{\mu \lambda} \Gamma^\lambda_{\nu \sigma}+\Gamma^\rho_{\nu \lambda} \Gamma^\lambda_{\mu \sigma}  \\quad [\mathrm{I}]$$
 
-And the Christoffel coefficients can be realized from the geodesic equation for universal Newtonian time $\mu$, as in Newton-Cartan theory (since the field defined in [Part II, I] transforms instantaneously, violating relativistic causality):
+And the Christoffel coefficients can be realized from the geodesic equation for universal Newtonian time $\mu$ - as in Newton-Cartan theory - since the field defined in [Part II, I] transforms instantaneously, violating relativistic causality:
 
 $$\frac{\partial^2 x^k}{\partial \mu^2}=-\Gamma^k_{ij} \frac{\partial x^i}{\partial \mu} \frac{\partial x^j}{\partial \mu} \\quad [\mathrm{II}]$$
 
@@ -89,9 +89,9 @@ $$\frac{\partial x^2}{\partial \mu}=sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\ph
 $$\frac{\partial^2 x^1}{\partial \mu^2}=-(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu  \\quad [\mathrm{VI.c}]$$
 $$\frac{\partial^2 x^2}{\partial \mu^2}=(\frac{\pi}{2}-\pi\phi_{\mu}(x_\mu))cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} \int_{0}^{\mu} {cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu - \frac{\pi^2}{4} \int_{0}^{\mu} {sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\nu} {\phi_{\rho}(x_\rho)} d\rho)} d\nu \\quad [\mathrm{VI.d}]$$
 
-The other Christoffel symbols, let alone the curvature tensor, become very unwieldly, so I will spare your eyes and omit them; just recall [III] if you really want to see them.
+The other Christoffel symbols, let alone the curvature tensor, become very unwieldly, so I will spare your eyes and omit them.
 
-Though a clean, closed-form exact solution likely does not exist - which is not uncommon in non-Euclidean astrophysics - we can still take note of interesting properties to implicitly study the behavior of this system. For instance, we can plug the identities in [IV] into equations [VI] to obtain these interesting systems of differential equations:
+Though a clean analytic solution likely does not exist - which is to be expected in non-Euclidean astrophysics - we can still take note of interesting properties to implicitly study the behavior of this system. For instance, we can plug the identities in [IV] into equations [VI] to obtain these interesting systems of differential equations:
 
 $$\frac{\partial x^1}{\partial \mu}=cos(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) - \frac{\pi}{2} x^2  \\quad [\mathrm{VII.a}]$$
 $$\frac{\partial x^2}{\partial \mu}=sin(\frac{\pi \mu}{2}-\pi\int_{0}^{\mu} {\phi_{\rho}(x_\rho)} d\rho) + \frac{\pi}{2} x^1  \\quad [\mathrm{VII.b}]$$
@@ -106,9 +106,9 @@ I would like to close off this section with an image of my original computations
 
 ## Closing Remarks
 
-Progress has been slow, largely due to having little time between my numerous academic, extracurricular, vocational, and social obligations; I hope that I will have more opportunities to pursue my research after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying the tools of harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. 
+Progress has been slow due to limitations in free time and in resources for research and computation; I hope that I will have more opportunities to pursue my research alongside pertinent researchers after I graduate from high school. With regards to the single-body-automaton/fish.py project, I am interested in applying harmonic analysis to decompose the body's trajectory (since complex exponentials have been so ubiquitous thus far), as well as formulating alternative scalar fields whose transformations do not occur instantaneously across the entire space, but which experience some form of causal retardation - that is, locality. 
 
-Though our equations have been nice and rigorous, it would be nice to visualize what sort of phenomena arise from them; this is why I created the fish.py program. And sure enough, fish.py (see below screenshot) reveals an orbit of varying precession and eccentricity very reminiscent of the frame-dragging induced by a rotating black hole, suggesting a connection (no pun intended) to (pseudo-)Riemannian geometry; this isn’t too far-fetched, since the mutual interaction between the body and the scalar field determining its trajectory is greatly analogous to the correspondence of the Einstein-Hilbert action with the Ricci scalar curvature and the metric determinant, as in $S = \frac{1}{2 \kappa} \int R \sqrt{-g} d^4 x$.
+Though our equations have been nice and rigorous, it would be nice to visualize what arises from them; this is why I created the fish.py program. And sure enough, fish.py (see below screenshot) reveals an orbit of varying precession and eccentricity very reminiscent of the frame-dragging induced by a rotating black hole, suggesting a connection (no pun intended) to (pseudo-)Riemannian geometry; this is plausible, since the mutual interaction between the body and the underlying scalar field is greatly analogous to the correspondence of the Einstein-Hilbert action with the Ricci scalar curvature and the metric determinant, as in $S = \frac{1}{2 \kappa} \int R \sqrt{-g} d^4 x$.
 
 <img width="608" height="548" alt="Screenshot 2025-09-21 9 16 29 AM" src="https://github.com/user-attachments/assets/ca00dd51-83a8-4f47-80bb-218c359e6ab1" />
 
